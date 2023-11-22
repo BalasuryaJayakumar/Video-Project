@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lobster&family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} 
+
+button, form, textarea {
+  font: inherit;
+}
+
+:root {
+  --BGCOLOR: rgb(245, 245, 245);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: rgb(176, 173, 173);
+  }
+} */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+h1, button {
+  text-transform: capitalize;
+}
+
+body {
+  font-size: clamp(1rem, 2.2vh, 1.5rem);
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--BGCOLOR);
+/*   width: 100vw;
+  height: 100vh; */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: 999;
+  visibility: visible;
+}
+
+.load {
+  z-index: -999;
+  visibility: hidden;
+}
+
+.header_h1 {
+  color: whitesmoke;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.video_content {
+  /* width: 100vw; */
+  height: 100vh;
+}
+
+.btn {
+  border: none;
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+  border-radius: 8px;
+  letter-spacing: 0.15rem;
+  z-index: 1;
+}
+
+.block {
+  width: 65px;
+  height: 38px;
+  background-color: rgb(9, 159, 234);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.chng .block {
+  left: 50%;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  position: absolute;
+}
+
+.btn:active {
+  border: 3px solid rgb(9, 159, 234);
+}
